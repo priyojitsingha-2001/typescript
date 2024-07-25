@@ -12,9 +12,21 @@ interface User {
     // getCoupon(coupon:string):number another example of a fuction
 }
 
+// reopening interface or inserting a new value to it
+interface User{
+    githubToken:string
+}
+
+// extending or inheriting an interface
+interface Admin extends User{
+    role:"admin"|"ta"|"learner"
+}
+
 // here we are creating a user of type user interface
-const priyojit: User = {
+const priyojit: Admin = {
     dbId: 11,
+    role:"admin",
+    githubToken:"github",
     email: "priyojit@google.com",
     userId: 221122,
     startTrial:()=>{
