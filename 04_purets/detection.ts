@@ -26,3 +26,20 @@ function printAll(strs:string|string[]|null){
         }
     }
 }
+
+// in opeartor
+interface User{
+    name:string,
+    email:string
+}
+
+interface Admin{
+    name:string,
+    email:string,
+    isAdmin:string
+}
+
+function isAdmin(account:User|Admin){
+    if("isAdmin" in account)
+        return account.isAdmin;
+}
